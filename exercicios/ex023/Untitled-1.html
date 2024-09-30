@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento TEF</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        form {
+            background: rgb(179, 218, 188);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(95, 8, 8, 0.1);
+
+        
+        }
+
+       text number submit {
+        background-color: aqua;
+        color: brown;
+
+        }
+
+
+        input[type="text"],
+        input[type="number"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 4px solid #ccc;
+            border-radius: 4px;
+                      
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: cell;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Formulário de Pagamento TEF</h2>
+
+<form action="processar_pagamento.php" method="POST">
+    <label for="nome"><strong>Nome do Titular do Cartão:</strong></label>
+    <input type="text" id="nome" name="nome" required>
+
+    <label for="numero_cartao">Número do Cartão:</label>
+    <input type="text" id="numero_cartao" name="numero_cartao" required>
+
+    <label for="validade">Data de Validade (MM/AA):</label>
+    <input type="text" id="validade" name="validade" required>
+
+    <label for="cvv">Código de Segurança (CVV):</label>
+    <input type="number" id="cvv" name="cvv" required>
+
+    <label for="valor">Valor da Transação:</label>
+    <input type="number" id="valor" name="valor" step="0.01" required>
+
+    <input type="submit" value="Pagar">
+</form>
+
+</body>
+</html>

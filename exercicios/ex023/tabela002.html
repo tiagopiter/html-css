@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="tb-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 500px;
+            border-collapse: collapse;
+            position: relative;
+        }
+
+        td, th {
+            border:  1px solid black;
+            padding: 10px;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgrey;
+        }
+        
+        thead, tfoot {
+            background-color: gray;
+            color: white;
+        }
+
+        thead > tr th {
+            position: sticky;
+            top: 1px;
+            background-color: #383838;
+        }
+
+        tbody > tr:nth-child(ood) {
+            background-color: white;
+            
+        }
+        tbody > tr:nth-child(even) {
+            background-color: lightgray;
+        }
+
+        td.num {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1> <!-- ANATOMIA PARA TABELAS GRADES
+    TABLE
+        CAPTION
+        THEAD
+            TR. TD. TH
+        TBODY 
+            TR. TD. TH
+        TFOOT
+            TR. TD. TH --->
+    <table>
+        <caption>População das Unidades Federativas</caption>
+        <thead>
+            <tr>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 100px;">População</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45 919 049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">39 234 234</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">50 122 111</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="num">12 999 222</td>
+            </tr>
+            <tr>
+                <td>Porto Velho</td>
+                <td class="num">11 222 333</td>
+            </tr>
+            <tr>
+                <td>Brasilia</td>
+                <td class="num">12 333 999</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">11 222 777</td>
+            </tr>
+            <tr>
+                <td>Amazonas</td>
+                <td class="num">88 333 212</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">99 123 888</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="num">10 255 322</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">66 129 192</td>
+            </tr>
+            <tr>
+                <td>Roraima</td>
+                <td class="num">55 000 222</td>
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <th><strong>Total de Habitantes</strong></th>
+                <td class="num"><strong>1229 288292</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    
+</body>
+</html>
